@@ -1,0 +1,11 @@
+// 自定义表格样式
+.ant-table {
+  .ant-table-thead > tr > th {
+    background-color: #fafafa;
+    font-weight: 600;
+  }
+
+  .ant-table-tbody > tr:hover > td {
+    background-color: #f5f5f5;
+  }
+}
