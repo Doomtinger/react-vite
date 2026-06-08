@@ -36,4 +36,53 @@
       }
     }
   }
+
+  .component-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+
+    .component-card {
+      text-decoration: none;
+      border: 1px solid #e8e8e8;
+      border-radius: 8px;
+      padding: 20px;
+      transition: all 0.3s;
+      background: white;
+      cursor: pointer;
+
+      &:hover {
+        border-color: #1677ff;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        transform: translateY(-2px);
+      }
+
+      &.active {
+        border-color: #1677ff;
+        background: #f0f7ff;
+      }
+
+      .component-card-content {
+        h3 {
+          margin: 0 0 8px 0;
+          font-size: 18px;
+          font-weight: 600;
+          color: rgba(0, 0, 0, 0.85);
+        }
+
+        p {
+          margin: 0 0 12px 0;
+          font-size: 14px;
+          color: rgba(0, 0, 0, 0.45);
+        }
+
+        .view-demo {
+          font-size: 14px;
+          color: #1677ff;
+          font-weight: 500;
+        }
+      }
+    }
+  }
 }

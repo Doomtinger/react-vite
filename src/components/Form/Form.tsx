@@ -1,5 +1,5 @@
 import { Form as AntForm } from 'antd'
-import type { FormProps } from './types'
+import type { FormProps, FormItemProps } from './types'
 import './Form.scss'
 
 /**

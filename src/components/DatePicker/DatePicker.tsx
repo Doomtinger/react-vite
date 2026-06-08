@@ -2,7 +2,7 @@ import { DatePicker as AntDatePicker } from 'antd'
 import type { DatePickerProps } from './types'
 import './DatePicker.scss'
 
-const { RangePicker } = AntDatePicker
+const { RangePicker, MonthPicker, YearPicker } = AntDatePicker
 
 /**
  * DatePicker 组件 - 基于 Ant Design DatePicker 的二次封装
@@ -23,5 +23,7 @@ const DatePicker = ({ label, required, ...restProps }: DatePickerProps) => {
 }
 
 DatePicker.RangePicker = RangePicker
+DatePicker.MonthPicker = MonthPicker
+DatePicker.YearPicker = YearPicker
 
 export default DatePicker

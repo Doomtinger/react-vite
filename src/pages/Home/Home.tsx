@@ -1,5 +1,7 @@
 import { Card, Button } from '@/components'
 import { useAppStore } from '@/stores'
+import { NavLink } from 'react-router-dom'
+import { COMPONENT_ROUTES } from '@/config/routes'
 import './Home.scss'
 
 /**
@@ -33,6 +35,20 @@ const Home = () => {
             <p>侧边栏状态: {collapsed ? '折叠' : '展开'}</p>
             <Button onClick={toggleCollapsed}>切换侧边栏</Button>
           </div>
+        </div>
+      </Card>
+
+      <Card title="组件演示" style={{ marginTop: 24 }}>
+        <div className="component-grid">
+          {COMPONENT_ROUTES.map((route) => (
+            <NavLink key={route.key} to={route.path || ''} className="component-card">
+              <div className="component-card-content">
+                <h3>{route.label.split(' ')[0]}</h3>
+                <p>{route.label.split(' ')[1] || '组件'}</p>
+                <span className="view-demo">查看演示 →</span>
+              </div>
+            </NavLink>
+          ))}
         </div>
       </Card>
     </div>

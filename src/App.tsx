@@ -3,6 +3,14 @@ import zhCN from 'antd/locale/zh_CN'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import MainLayout from '@/layouts/MainLayout'
 import Home from '@/pages/Home/Home'
+import ButtonDemo from '@/pages/Components/ButtonDemo'
+import InputDemo from '@/pages/Components/InputDemo'
+import SelectDemo from '@/pages/Components/SelectDemo'
+import FormDemo from '@/pages/Components/FormDemo'
+import TableDemo from '@/pages/Components/TableDemo'
+import ModalDemo from '@/pages/Components/ModalDemo'
+import CardDemo from '@/pages/Components/CardDemo'
+import DatePickerDemo from '@/pages/Components/DatePickerDemo'
 import { useAppStore } from '@/stores'
 import './App.scss'
 
@@ -27,7 +35,14 @@ function App() {
         <Routes>
           <Route path="/" element={<MainLayout />}>
             <Route index element={<Home />} />
-            {/* 其他路由可以在这里添加 */}
+            <Route path="components/button" element={<ButtonDemo />} />
+            <Route path="components/input" element={<InputDemo />} />
+            <Route path="components/select" element={<SelectDemo />} />
+            <Route path="components/form" element={<FormDemo />} />
+            <Route path="components/table" element={<TableDemo />} />
+            <Route path="components/modal" element={<ModalDemo />} />
+            <Route path="components/card" element={<CardDemo />} />
+            <Route path="components/datepicker" element={<DatePickerDemo />} />
           </Route>
         </Routes>
       </BrowserRouter>

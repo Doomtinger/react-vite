@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s http://localhost:3000/components/button)",
+      "Bash(curl -s http://localhost:3000/)",
+      "Bash(curl -s http://localhost:3000/components/select)",
+      "Bash(curl -s http://localhost:3000/components/__TRACKED_VAR__)",
+      "Bash(curl -s http://localhost:3000/components/datepicker)"
+    ]
+  }
+}

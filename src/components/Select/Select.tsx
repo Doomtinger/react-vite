@@ -2,7 +2,7 @@ import { Select as AntSelect } from 'antd'
 import type { SelectProps } from './types'
 import './Select.scss'
 
-const { Option } = AntSelect
+const { Option, OptGroup } = AntSelect
 
 /**
  * Select 组件 - 基于 Ant Design Select 的二次封装
@@ -23,5 +23,6 @@ const Select = ({ label, required, ...restProps }: SelectProps) => {
 }
 
 Select.Option = Option
+Select.OptGroup = OptGroup
 
 export default Select
