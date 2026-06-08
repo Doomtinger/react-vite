@@ -1,5 +1,30 @@
 .main-layout {
-  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
+
+  > .ant-layout-sider {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 20;
+  }
+
+  > .ant-layout {
+    margin-left: 260px; // 侧边栏宽度
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: margin-left 0.2s;
+  }
+
+  // 当侧边栏折叠时调整布局
+  .ant-layout-sider.ant-layout-sider-collapsed + .ant-layout {
+    margin-left: 80px; // 折叠后的宽度
+  }
 
   .logo {
     height: 64px;
@@ -69,9 +94,9 @@
     display: flex;
     align-items: center;
     box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
-    position: sticky;
-    top: 0;
+    flex-shrink: 0;
     z-index: 10;
+    height: 64px;
 
     .header-content {
       width: 100%;
@@ -98,12 +123,15 @@
     padding: 24px;
     background: white;
     border-radius: 8px;
-    min-height: 400px;
-    overflow: auto;
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 
   .layout-footer {
     text-align: center;
     color: rgba(0, 0, 0, 0.45);
+    flex-shrink: 0;
+    padding: 16px 0;
   }
 }

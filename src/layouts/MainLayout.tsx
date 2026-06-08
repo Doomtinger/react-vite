@@ -72,7 +72,7 @@ const MainLayout = () => {
           <Outlet />
         </Content>
         <Footer className="layout-footer">
-          React Vite Framework ©2024 Created with ❤️
+          React Vite Framework ©2026 Created with ❤️
         </Footer>
       </Layout>
     </Layout>
